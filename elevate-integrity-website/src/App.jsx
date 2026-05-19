@@ -114,7 +114,7 @@ export default function App() {
                     [Radar, "Encoded PAUT / TOFD", "Long seam, girth weld, and advanced UT applications."],
                     [FileCheck, "Clear Reporting", "Client-ready documentation, job books, and inspection summaries."],
                     [HardHat, "Qualified Field Personnel", "Utility through chief inspectors, CWI, API, NACE, and NDT support."],
-                    [MapPin, "Regional Coverage", "Responsive support across Ohio, Pennsylvania, Illinois, the Midwest, and Northeast."],
+                    [MapPin, "Nationwide Coverage", "Responsive support across Ohio, Michigan, Pennsylvania, Illinois, the Midwest, and Northeast. With technicians located Nationwide"],
                   ].map(([Icon, title, text]) => (
                     <div key={title} className="flex gap-4 rounded-2xl border border-white/10 bg-slate-900/70 p-5">
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-500/20 text-orange-300">
