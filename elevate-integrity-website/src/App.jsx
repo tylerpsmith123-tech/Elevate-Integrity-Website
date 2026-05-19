@@ -41,7 +41,7 @@ function Card({ children, className = "" }) {
 export default function App() {
   const services = [
     ["Advanced Ultrasonics", "PAUT, TOFD, encoded long seam inspection, corrosion mapping, and specialized UT applications."],
-    ["Conventional NDT", "UT, MT, PT, VT, weld inspection, sleeve inspection, repair verification, and fabrication support."],
+    ["Conventional NDT", "RT, UT, MT, PT, VT, weld inspection, In-Service Inspection, repair verification, and fabrication support."],
     ["Pipeline Integrity", "ILI dig verification, SCC validation, integrity excavations, anomaly assessment, and field oversight."],
     ["Utility & Chief Inspection", "Utility inspectors through chief inspectors with project oversight and documentation support."],
     ["Procedure & Compliance Support", "Written practices, inspection procedures, audit responses, and client-specific documentation."],
