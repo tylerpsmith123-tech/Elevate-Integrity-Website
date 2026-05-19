@@ -64,8 +64,13 @@ export default function App() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#top" className="block">
-            <div className="text-xl font-bold tracking-wide">Elevate Integrity Services</div>
-            <div className="text-xs uppercase tracking-[0.25em] text-slate-400">NDT • PAUT • Pipeline Integrity</div>
+            <div className="flex items-center gap-3">
+  <img src="/background removed blue.png" alt="Elevate Integrity Services" className="h-12 w-auto" />
+  <div>
+    <div className="text-xl font-bold tracking-wide">Elevate Integrity Services</div>
+    <div className="text-xs uppercase tracking-[0.25em] text-slate-400">NDT • PAUT • Pipeline Integrity</div>
+  </div>
+</div>
           </a>
           <nav className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
             <a href="#services" className="hover:text-white">Services</a>
