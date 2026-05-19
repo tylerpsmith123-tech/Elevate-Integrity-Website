@@ -45,7 +45,7 @@ export default function App() {
     ["Pipeline Integrity", "ILI dig verification, SCC validation, integrity excavations, anomaly assessment, and field oversight."],
     ["Utility & Chief Inspection", "Utility inspectors through chief inspectors with project oversight and documentation support."],
     ["Procedure & Compliance Support", "Written practices, inspection procedures, audit responses, and client-specific documentation."],
-    ["Reporting & Job Books", "Clean, consistent reporting packages designed for client review and long-term records."],
+    ["Reporting & Job Books", "Clean, consistent reporting packages designed for client review and long-term records. Typical out withen an hour to minimize downtime"],
   ];
 
   const industries = [
