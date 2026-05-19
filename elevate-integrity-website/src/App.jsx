@@ -214,11 +214,11 @@ export default function App() {
             </div>
             <div className="rounded-[2rem] bg-white p-8 shadow-2xl">
               <div className="space-y-4 text-slate-800">
-                <div className="flex items-center gap-3"><Phone className="h-5 w-5" /> (000) 000-0000</div>
+                <div className="flex items-center gap-3"><Phone className="h-5 w-5" /> (419) 575-1304</div>
                 <div className="flex items-center gap-3"><Mail className="h-5 w-5" /> info@elevateintegrity.com</div>
                 <div className="flex items-center gap-3"><MapPin className="h-5 w-5" /> Delaware, Ohio</div>
               </div>
-              <a href="mailto:info@elevateintegrity.com?subject=Inspection%20Quote%20Request">
+              <a href="mailto:Tyler@elevateintegrity.com?subject=Inspection%20Quote%20Request">
                 <Button className="mt-7 w-full bg-slate-950 py-4 text-base text-white hover:bg-slate-800">Start a Quote</Button>
               </a>
             </div>
