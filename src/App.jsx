@@ -9,7 +9,7 @@ const EMAIL = "Tyler@elevateintegrity.com";
 const photos = {
   hero: "https://source.unsplash.com/1800x1100/?pipeline,industrial,inspection",
   ndt: "/ndt.jpg",
-  pipe: "https://source.unsplash.com/1400x900/?pipeline,construction,energy",
+  pipe: "/pipeline.jpg",
   refinery: "https://source.unsplash.com/1400x900/?refinery,terminal,industrial",
   tech: "https://source.unsplash.com/1400x900/?engineer,hardhat,industrial",
 };
