@@ -33,7 +33,7 @@ function Header({ page, setPage }) {
     <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
       <button onClick={() => go("home")} className="flex items-center gap-3 text-left">
         <img src="/elevate-logo.png" alt="Elevate Integrity Services" className="h-14 w-auto" />
-        <div className="hidden sm:block"><div className="font-bold text-white">Elevate Integrity Services</div><div className="text-[11px] uppercase tracking-[.22em] text-slate-400">NDT • PAUT • Pipeline Integrity</div></div>
+        <div className="hidden sm:block"><div className="font-bold text-white">Elevate Integrity Services</div><div className="text-[11px] uppercase tracking-[.22em] text-slate-400">Advanced NDT • MT/PT/RT • Third Party Inspectors</div></div>
       </button>
       <nav className="hidden gap-7 text-sm font-medium text-slate-300 lg:flex">{nav.map(([id,label]) => <button key={id} onClick={() => go(id)} className={page===id ? "text-sky-400" : "hover:text-white"}>{label}</button>)}</nav>
       <a href={`mailto:${EMAIL}`} className="hidden lg:block"><Button outline className="px-4 py-2 text-sm">Request Quote</Button></a>
