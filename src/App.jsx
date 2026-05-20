@@ -10,7 +10,7 @@ const photos = {
   hero: "/hero.jpg",
   ndt: "/ndt.jpg",
   pipe: "/pipeline.jpg",
-  refinery: "https://source.unsplash.com/1400x900/?refinery,terminal,industrial",
+  refinery: "/refinery.jpg",
   tech: "https://source.unsplash.com/1400x900/?engineer,hardhat,industrial",
 };
 
