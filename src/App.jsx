@@ -32,7 +32,7 @@ function Header({ page, setPage }) {
   return <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
     <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
       <button onClick={() => go("home")} className="flex items-center gap-3 text-left">
-        <img src="/elevate-logo.png" alt="Elevate Integrity Services" className="w-full max-w-sm object-contain" />
+        <img src="/elevate-logo.png" alt="Elevate Integrity Services" className="h-14 w-auto" />
         <div className="hidden sm:block"><div className="font-bold text-white">Elevate Integrity Services</div><div className="text-[11px] uppercase tracking-[.22em] text-slate-400">NDT • PAUT • Pipeline Integrity</div></div>
       </button>
       <nav className="hidden gap-7 text-sm font-medium text-slate-300 lg:flex">{nav.map(([id,label]) => <button key={id} onClick={() => go(id)} className={page===id ? "text-sky-400" : "hover:text-white"}>{label}</button>)}</nav>
