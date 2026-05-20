@@ -11,7 +11,7 @@ const photos = {
   ndt: "/ndt.jpg",
   pipe: "/pipeline.jpg",
   refinery: "/refinery.jpg",
-  tech: "https://source.unsplash.com/1400x900/?engineer,hardhat,industrial",
+  tech: "/contact.jpg",
 };
 
 const nav = [
