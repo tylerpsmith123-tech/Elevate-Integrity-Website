@@ -23,7 +23,7 @@ const nav = [
 ];
 
 function Button({ children, className = "", outline = false, ...props }) {
-  return <button className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-bold ${outline ? "border border-white/25 bg-white/5 text-white hover:bg-white/15" : "bg-sky-500 text-white hover:bg-sky-400"} ${className}`} {...props}>{children}</button>;
+  return <button className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-bold ${outline ? "border border-white/25 bg-white/5 text-slate-900 hover:bg-white/90" : "bg-sky-500 text-white hover:bg-sky-400"} ${className}`} {...props}>{children}</button>;
 }
 
 function Header({ page, setPage }) {
