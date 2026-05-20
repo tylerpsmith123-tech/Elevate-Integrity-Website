@@ -57,7 +57,7 @@ function Hero({ setPage }) {
       </motion.div>
       <motion.div initial={{opacity:0,x:26}} animate={{opacity:1,x:0}} transition={{duration:.7,delay:.15}} className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-2xl backdrop-blur">
         <img src="/elevate-logo.png" alt="Elevate logo" className="mx-auto mb-6 h-40 w-auto" />
-        {["PAUT / TOFD inspection support", "RT / UTSW / VT / MT / PT & Destructive Testing", "Utility, API, CWI, CPWI, and NACE Inspectors", "Clear reporting and field-ready documentation"].map(x => <div key={x} className="mb-3 flex items-center gap-3 rounded-2xl bg-white/[.07] p-4 text-slate-200"><CheckCircle2 className="h-5 w-5 text-sky-400" />{x}</div>)}
+        {["Advanced Service PAUT / TOFD inspection support", "RT / UTSW / VT / MT / PT / Destructive Testing", "Utility, API, CWI, CPWI, and NACE Inspectors", "Clear reporting and field-ready documentation"].map(x => <div key={x} className="mb-3 flex items-center gap-3 rounded-2xl bg-white/[.07] p-4 text-slate-200"><CheckCircle2 className="h-5 w-5 text-sky-400" />{x}</div>)}
       </motion.div>
     </div>
   </section>
