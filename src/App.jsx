@@ -76,7 +76,130 @@ function ImageText({image,title,text,reverse}){return <section className="mt-20 
 function Ndt(){const items=[["PAUT / TOFD","Advanced ultrasonic inspection for welds, long seam applications, encoded scans, and project-specific inspection needs."],["UT / UTSW / UTT","Conventional ultrasonic weld and thickness inspection for fabrication, maintenance, and integrity support."],["Magnetic Particle Testing","MT inspection for welds, repairs, sleeves, and surface-breaking discontinuities."],["PT / VT / RT", "Liquid penetrant, visual, and radiographic testing support for applicable components, welds, fabrication, and field conditions."],["Corrosion Mapping","Automated and semi-automated ultrasonic data collection for corrosion assessment and documentation."],["Procedure Support","Client-specific procedures, written practices, and inspection documentation support."]];return <Interior eyebrow="NDT Services" title="Advanced and conventional NDT for critical inspection work." text="From routine NDE to advanced ultrasonic inspections, our focus is accurate data, practical answers, and fast turnaround." image={photos.ndt}><Grid items={items}/><ImageText image={photos.tech} title="Built around real field conditions." text="Elevate supports weld inspection, repair verification, fabrication work, terminal projects, pipeline integrity work, and outage-related inspection needs. Our goal is simple: deliver the right inspection method, clean documentation, and field-ready answers."/></Interior>}
 function Pipeline(){const items=[["ILI Dig Verification","Field inspection support for anomaly verification, excavation support, documentation, and integrity closeout."],["SCC Validation","Inspection support for stress corrosion cracking programs, documentation, and repair verification."],["Long Seam Inspection","Encoded phased array inspection support for seam assessment and project-specific long seam applications."],["Girth Weld Inspection","Advanced and conventional inspection support for girth weld assessment and repair programs."],["Sleeve / Repair Inspection","MT, VT, UT, and documentation support for sleeves, repairs, and post-repair inspection work."],["Field Oversight","Utility inspection and project oversight support for pipeline integrity campaigns."]];return <Interior eyebrow="Pipeline Integrity" title="Inspection support for integrity digs, SCC, long seam, and field execution." text="Elevate supports pipeline integrity projects with experienced inspectors, advanced NDT capabilities, clear reporting, and responsive field coverage." image={photos.pipe}><Grid items={items}/><ImageText reverse image={photos.refinery} title="Designed for owners, operators, and project teams." text="We support planned work, integrity campaigns, callouts, outage support, and project-based staffing across pipeline, terminal, station, and related industrial assets."/></Interior>}
 function Industries(){const items=["Pipeline Integrity","Refineries & Terminals","Fabrication Shops","Compressor & Pump Stations","ILI Verification Digs","Maintenance & Outage Work","Weld Repair Programs","Owner Representation"];return <Interior eyebrow="Industries & Coverage" title="Inspection support for critical infrastructure." text="Based in Ohio with inspection personnel positioned across multiple regions, Elevate supports projects throughout the Midwest, Northeast, and beyond when project scope requires it." image={photos.refinery}><div className="grid gap-4 md:grid-cols-4">{items.map(x=><div key={x} className="border border-white/10 bg-slate-950 p-6 text-lg font-bold text-white">{x}</div>)}</div><section className="mt-20 grid gap-10 border border-white/10 bg-slate-900 p-8 md:grid-cols-[1fr_1.1fr] md:p-12"><div><div className="text-sm font-bold uppercase tracking-[.25em] text-sky-400">Coverage</div><h2 className="mt-4 text-4xl font-black tracking-tight text-white">Strategically positioned for responsive field support.</h2></div><div className="space-y-5 text-lg leading-8 text-slate-300"><p>Based in Dover, Ohio, Elevate is positioned to support pipeline, terminal, station, fabrication, maintenance, and integrity work throughout key operating regions.</p><div className="rounded-2xl bg-slate-950 p-6">Available for planned work, integrity campaigns, callouts, outage support, and project-based staffing.</div></div></section></Interior>}
-function Contact(){return <Interior eyebrow="Contact" title="Need inspection support?" text="Send the scope, location, schedule, and required method. We’ll help clarify the request and build a practical quote." image={photos.tech}><section className="grid gap-8 md:grid-cols-[.9fr_1.1fr]"><div className="border border-white/10 bg-slate-950 p-8"><h2 className="text-3xl font-black text-white">Start a Quote</h2><p className="mt-4 leading-7 text-slate-400">For faster pricing, include project location, inspection method, schedule, estimated duration, site requirements, and any client-specific reporting needs.</p><div className="mt-8 space-y-5"><a href={`tel:${PHONE.replace(/[^0-9]/g,"")}`} className="flex items-center gap-4 text-lg font-semibold text-white hover:text-sky-400"><Phone className="h-6 w-6 text-sky-400"/>{PHONE}</a><a href={`mailto:${EMAIL}`} className="flex items-center gap-4 text-lg font-semibold text-white hover:text-sky-400"><Mail className="h-6 w-6 text-sky-400"/>{EMAIL}</a><div className="flex items-center gap-4 text-lg font-semibold text-white"><MapPin className="h-6 w-6 text-sky-400"/>Dover, Ohio</div></div></div><div className="border border-white/10 bg-slate-900 p-8"><div className="text-sm font-bold uppercase tracking-[.25em] text-sky-400">Quote Request Details</div><div className="mt-6 grid gap-4">{["Project name and location","Required inspection method","Estimated start date and duration","Site access and safety requirements","Reporting or documentation requirements","Applicable code, procedure, or client standard"].map(x=><div key={x} className="flex items-center gap-3 rounded-xl bg-slate-950 p-4 text-slate-200"><ClipboardCheck className="h-5 w-5 text-sky-400"/>{x}</div>)}</div><a href={`mailto:${EMAIL}?subject=Inspection Quote Request`} className="mt-7 block"><Button className="w-full py-4 text-base">Email Quote Request</Button></a></div></section></Interior>}
+function ContactPage() {
+  const [form, setForm] = useState({
+    project: "",
+    method: "",
+    schedule: "",
+    access: "",
+    reporting: "",
+    code: "",
+  });
+
+  const updateForm = (field, value) => {
+    setForm((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const emailBody = encodeURIComponent(
+    `Quote Request Details
+
+Project name and location:
+${form.project}
+
+Required inspection method:
+${form.method}
+
+Estimated start date and duration:
+${form.schedule}
+
+Site access and safety requirements:
+${form.access}
+
+Reporting or documentation requirements:
+${form.reporting}
+
+Applicable code, procedure, or client standard:
+${form.code}`
+  );
+
+  const emailLink = `mailto:${EMAIL}?subject=Inspection Quote Request&body=${emailBody}`;
+
+  return (
+    <InteriorPage
+      eyebrow="Contact"
+      title="Need inspection support?"
+      text="Send the scope, location, schedule, and required method. We’ll help clarify the request and build a practical quote."
+      image={images.refinery}
+    >
+      <section className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
+        <div className="border border-white/10 bg-slate-950 p-8">
+          <h2 className="text-3xl font-black text-white">Start a Quote</h2>
+          <p className="mt-4 leading-7 text-slate-400">
+            For faster pricing, include project location, inspection method, schedule, estimated duration, site requirements, and any client-specific reporting needs.
+          </p>
+
+          <div className="mt-8 space-y-5">
+            <a href={`tel:${PHONE.replace(/[^0-9]/g, "")}`} className="flex items-center gap-4 text-lg font-semibold text-white hover:text-sky-400">
+              <Phone className="h-6 w-6 text-sky-400" /> {PHONE}
+            </a>
+            <a href={`mailto:${EMAIL}`} className="flex items-center gap-4 text-lg font-semibold text-white hover:text-sky-400">
+              <Mail className="h-6 w-6 text-sky-400" /> {EMAIL}
+            </a>
+            <div className="flex items-center gap-4 text-lg font-semibold text-white">
+              <MapPin className="h-6 w-6 text-sky-400" /> Delaware, Ohio
+            </div>
+          </div>
+        </div>
+
+        <div className="border border-white/10 bg-slate-900 p-8">
+          <div className="text-sm font-bold uppercase tracking-[0.25em] text-sky-400">
+            Quote Request Details
+          </div>
+
+          <div className="mt-6 grid gap-4">
+            <input
+              className="rounded-xl border border-white/10 bg-slate-950 p-4 text-white placeholder:text-slate-500"
+              placeholder="Project name and location"
+              value={form.project}
+              onChange={(e) => updateForm("project", e.target.value)}
+            />
+
+            <input
+              className="rounded-xl border border-white/10 bg-slate-950 p-4 text-white placeholder:text-slate-500"
+              placeholder="Required inspection method"
+              value={form.method}
+              onChange={(e) => updateForm("method", e.target.value)}
+            />
+
+            <input
+              className="rounded-xl border border-white/10 bg-slate-950 p-4 text-white placeholder:text-slate-500"
+              placeholder="Estimated start date and duration"
+              value={form.schedule}
+              onChange={(e) => updateForm("schedule", e.target.value)}
+            />
+
+            <textarea
+              className="min-h-28 rounded-xl border border-white/10 bg-slate-950 p-4 text-white placeholder:text-slate-500"
+              placeholder="Site access and safety requirements"
+              value={form.access}
+              onChange={(e) => updateForm("access", e.target.value)}
+            />
+
+            <textarea
+              className="min-h-28 rounded-xl border border-white/10 bg-slate-950 p-4 text-white placeholder:text-slate-500"
+              placeholder="Reporting or documentation requirements"
+              value={form.reporting}
+              onChange={(e) => updateForm("reporting", e.target.value)}
+            />
+
+            <textarea
+              className="min-h-28 rounded-xl border border-white/10 bg-slate-950 p-4 text-white placeholder:text-slate-500"
+              placeholder="Applicable code, procedure, or client standard"
+              value={form.code}
+              onChange={(e) => updateForm("code", e.target.value)}
+            />
+          </div>
+
+          <a href={emailLink} className="mt-7 block">
+            <Button className="w-full py-4 text-base">
+              Email Quote Request
+            </Button>
+          </a>
+        </div>
+      </section>
+    </InteriorPage>
+  );
+}
 function Cta({setPage}){return <section className="px-6 py-24"><div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-r from-sky-600 to-slate-900 p-10 shadow-2xl md:p-14"><div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center"><div><h2 className="text-4xl font-black tracking-tight text-white md:text-5xl">Need inspection support?</h2><p className="mt-4 max-w-2xl text-lg leading-8 text-sky-50">Send the scope, location, schedule, and required method. We’ll help clarify the request and build a practical quote.</p></div><Button onClick={()=>setPage("contact")} className="bg-white px-8 py-4 text-slate-950 hover:bg-slate-100">Contact Elevate <ArrowRight className="ml-2 h-5 w-5"/></Button></div></div></section>}
 function Footer({setPage}){return <footer className="border-t border-white/10 bg-slate-950 px-6 py-10"><div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.2fr_.8fr_.8fr]"><div><img src="/elevate-logo.png" className="mb-5 h-20 w-auto"/><p className="max-w-xl leading-7 text-slate-400">Advanced NDT, PAUT, TOFD, pipeline integrity, utility inspection, and field oversight support.</p></div><div><div className="mb-4 font-bold text-white">Pages</div><div className="grid gap-2 text-slate-400">{nav.map(([id,label])=><button key={id} onClick={()=>setPage(id)} className="text-left hover:text-sky-400">{label}</button>)}</div></div><div><div className="mb-4 font-bold text-white">Contact</div><div className="grid gap-3 text-slate-400"><a href={`tel:${PHONE.replace(/[^0-9]/g,"")}`} className="hover:text-sky-400">{PHONE}</a><a href={`mailto:${EMAIL}`} className="hover:text-sky-400">{EMAIL}</a><div>Dover, Ohio</div></div></div></div><div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-sm text-slate-500">© 2026 Elevate Integrity Services. All rights reserved.</div></footer>}
 export default function App(){const [page,setPage]=useState("home");return <div className="min-h-screen bg-slate-950 text-white"><Header page={page} setPage={setPage}/>{page==="ndt"?<Ndt/>:page==="pipeline"?<Pipeline/>:page==="industries"?<Industries/>:page==="contact"?<Contact/>:<Home setPage={setPage}/>}<Footer setPage={setPage}/></div>}
