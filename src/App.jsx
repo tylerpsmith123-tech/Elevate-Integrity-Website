@@ -51,7 +51,7 @@ function Hero({ setPage }) {
     <div className="relative mx-auto grid min-h-[760px] max-w-7xl items-center gap-10 px-6 py-20 md:grid-cols-[1.15fr_.85fr]">
       <motion.div initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} transition={{duration:.7}}>
         <div className="mb-6 inline-flex rounded-full border border-sky-300/30 bg-sky-500/10 px-4 py-2 text-sm font-medium text-sky-200">Premium inspection support for critical assets</div>
-        <h1 className="max-w-4xl text-5xl font-black leading-[.95] tracking-tight text-white md:text-7xl">Advanced NDT, pipeline integrity, and third-party inspection support — from pipeline systems to terminals, refineries, fabrication, and outage-related projects.</h1>
+        <h1 className="max-w-4xl text-5xl font-black leading-[.95] tracking-tight text-white md:text-5xl">Advanced NDT, pipeline integrity, and third-party inspection support — from pipeline systems to terminals, refineries, fabrication, and outage-related projects.</h1>
         <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 md:text-xl">Elevate Integrity Services supports pipeline, refinery, station, fabrication, and integrity projects with experienced inspectors, advanced NDT capabilities, clear reporting, and responsive field coverage.</p>
         <div className="mt-9 flex flex-col gap-4 sm:flex-row"><a href={`mailto:${EMAIL}?subject=Inspection Quote Request`}><Button className="w-full py-4 text-base sm:w-auto">Request a Quote <ArrowRight className="ml-2 h-5 w-5" /></Button></a><Button outline onClick={() => setPage("ndt")} className="w-full py-4 text-base sm:w-auto">View Capabilities</Button></div>
       </motion.div>
