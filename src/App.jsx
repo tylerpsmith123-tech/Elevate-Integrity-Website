@@ -7,7 +7,7 @@ const PHONE = "(419) 575-1304";
 const EMAIL = "Tyler@elevateintegrity.com";
 
 const photos = {
-  hero: "hero.jpg",
+  hero: "/hero.jpg",
   ndt: "/ndt.jpg",
   pipe: "/pipeline.jpg",
   refinery: "https://source.unsplash.com/1400x900/?refinery,terminal,industrial",
